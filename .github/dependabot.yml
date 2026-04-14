@@ -7,11 +7,13 @@ updates:
     schedule:
       # Check for updates to GitHub Actions every weekday
       interval: "daily"
+    open-pull-requests-limit: 50
 
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
       interval: "daily"
+    open-pull-requests-limit: 50
 
   - package-ecosystem: npm
     target-branch: dev
@@ -23,6 +25,7 @@ updates:
         update-types: [ "version-update:semver-major" ]
     labels:
       - 'feature / dependency'
+    open-pull-requests-limit: 50
 
   - package-ecosystem: pip
     target-branch: dev
@@ -34,3 +37,4 @@ updates:
         update-types: [ "version-update:semver-major" ]
     labels:
       - 'feature / dependency'
+    open-pull-requests-limit: 50
