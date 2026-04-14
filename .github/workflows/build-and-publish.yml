@@ -37,7 +37,7 @@ jobs:
 
       - name: Docker Image Metadata
         id: meta
-        uses: docker/metadata-action@v3
+        uses: docker/metadata-action@v6
         with:
           images: |
             powerdnsadmin/pda-legacy
