@@ -2,8 +2,8 @@
 name: 'Docker Image'
 
 env:
-  BUILD_CONTEXT_PATH: docker
-  CONTAINERFILE_PATH: Dockerfile
+  BUILD_CONTEXT_PATH: .
+  CONTAINERFILE_PATH: docker/Dockerfile
   WORKFLOW_TRIGGER: 1
   REGISTRY: ghcr.io
   IMAGE_NAME: powerdns-admin
