@@ -1,4 +1,4 @@
-FROM alpine:3.17 AS builder
+FROM alpine:3.23 AS builder
 
 ARG BUILD_DEPENDENCIES="build-base \
     libffi-dev \
