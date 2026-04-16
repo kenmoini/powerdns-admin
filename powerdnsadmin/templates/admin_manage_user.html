@@ -81,7 +81,7 @@
                                         <td>
                                             <div class="dropdown">
                                                 <button class="btn btn-primary dropdown-toggle" type="button"
-                                                        id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true"
+                                                        id="dropdownMenu" data-bs-toggle="dropdown" aria-haspopup="true"
                                                         aria-expanded="false"
                                                         {% if current_user.role.name=='Operator' and user.role.name=='Administrator' %}disabled{% endif %}>
                                                     <i class="fa-solid fa-bars"></i>
@@ -198,7 +198,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Confirmation</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -206,7 +206,7 @@
                     <p></p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary float-right" data-dismiss="modal">
+                    <button type="button" class="btn btn-secondary float-right" data-bs-dismiss="modal">
                         Close
                     </button>
                     <button type="button" class="btn btn-danger float-right" id="button_revoke_confirm">
@@ -222,7 +222,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Confirmation</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -230,7 +230,7 @@
                     <p></p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default float-right" data-dismiss="modal">
+                    <button type="button" class="btn btn-default float-right" data-bs-dismiss="modal">
                         Close
                     </button>
                     <button type="button" class="btn btn-danger float-right" id="button_delete_confirm">

@@ -206,7 +206,7 @@ let AuthenticationSettingsModel = function (user_data, api_url, csrf_token, sele
         ];
 
         let errorCheckQuery = errorCheckSelectors.join(',');
-        let tabs = target.find('.tab-content > *[data-tab]')
+        let tabs = target.find('.tab-content > *[data-bs-tab]')
 
         let onElementChanged = function (event) {
             target.valid();
@@ -364,7 +364,7 @@ let AuthenticationSettingsModel = function (user_data, api_url, csrf_token, sele
                 tabs.each(function (index, tab) {
                     tab = $(tab);
                     let tabId = tab.data('tab');
-                    let tabLink = target.find('.nav-tabs > li > a[data-tab="' + tabId + '"]');
+                    let tabLink = target.find('.nav-tabs > li > a[data-bs-tab="' + tabId + '"]');
                     if (tab.find(errorCheckQuery).length > 0) {
                         tabLink.addClass('error');
                     } else {

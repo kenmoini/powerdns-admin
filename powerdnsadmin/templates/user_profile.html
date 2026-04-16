@@ -34,20 +34,20 @@
                             <div class="nav-tabs-custom mb-2">
                                 <ul class="nav nav-tabs" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link {{ 'active' if not error_messages else '' }}" href="#tabs-personal" data-toggle="tab">
+                                        <a class="nav-link {{ 'active' if not error_messages else '' }}" href="#tabs-personal" data-bs-toggle="tab">
                                             Personal Info
                                         </a>
                                     </li>
                                     {% if session['authentication_type'] == 'LOCAL' %}
                                         <li class="nav-item">
-                                            <a class="nav-link {{ 'active' if 'password' in error_messages else '' }}" href="#tabs-password" data-toggle="tab">
+                                            <a class="nav-link {{ 'active' if 'password' in error_messages else '' }}" href="#tabs-password" data-bs-toggle="tab">
                                                 Change Password
                                             </a>
                                         </li>
                                     {% endif %}
                                     {% if session['authentication_type'] in ['LOCAL', 'LDAP'] %}
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#tabs-authentication" data-toggle="tab">
+                                            <a class="nav-link" href="#tabs-authentication" data-bs-toggle="tab">
                                                 Authentication
                                             </a>
                                         </li>

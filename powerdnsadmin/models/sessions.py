@@ -4,6 +4,7 @@ from .base import db
 
 
 class Sessions(db.Model):
+    __table_args__ = {'extend_existing': True}
     id = db.Column(db.Integer, primary_key=True)
     session_id = db.Column(db.String(255), index=True, unique=True)
     data = db.Column(db.BLOB)

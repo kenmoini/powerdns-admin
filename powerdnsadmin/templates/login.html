@@ -30,23 +30,23 @@
         <div class="card-body login-card-body">
             {% if error %}
                 <div class="alert alert-danger alert-dismissible">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <button type="button" class="close" data-bs-dismiss="alert" aria-hidden="true">&times;</button>
                     {{ error }}
                 </div>
             {% endif %}
             {% if SETTING.get('ldap_enabled') or SETTING.get('local_db_enabled') %}
-                <form action="" method="post" data-toggle="validator">
+                <form action="" method="post" data-bs-toggle="validator">
                     <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Username" name="username"
-                               data-error="Please input your username" required
+                               data-bs-error="Please input your username" required
                                autofocus
                                {% if username %}value="{{ username }}" {% endif %}>
                         <span class="help-block with-errors"></span>
                     </div>
                     <div class="form-group">
                         <input type="password" class="form-control" placeholder="Password" name="password"
-                               data-error="Please input your password" required
+                               data-bs-error="Please input your password" required
                                {% if password %}value="{{ password }}" {% endif %}>
                         <span class="help-block with-errors"></span>
                     </div>

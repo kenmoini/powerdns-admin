@@ -36,7 +36,7 @@
                                 <div class="overlay-wrapper" data-bind="visible: loading() || saving()">
                                     <div class="overlay">
                                         <i class="fas fa-3x fa-sync-alt fa-spin"></i>
-                                        <div class="text-bold pt-2 pl-2"
+                                        <div class="text-bold pt-2 ps-2"
                                              data-bind="text: (loading() ? 'Loading' : 'Saving') + ' settings...'"></div>
                                     </div>
                                 </div>
@@ -70,43 +70,43 @@
                                 <div class="nav-tabs-custom">
                                     <ul class="nav nav-tabs" role="tablist">
                                         <li class="nav-item">
-                                            <a data-tab="local"
+                                            <a data-bs-tab="local"
                                                data-bind="click: onTabClick, class: 'nav-link' + (tab_active() == 'local' ? ' active' : '')"
-                                               href="#" data-toggle="pill" role="tab">Local</a>
+                                               href="#" data-bs-toggle="pill" role="tab">Local</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a data-tab="ldap"
+                                            <a data-bs-tab="ldap"
                                                data-bind="click: onTabClick, class: 'nav-link' + (tab_active() == 'ldap' ? ' active' : '')"
-                                               href="#" data-toggle="pill" role="tab">LDAP</a>
+                                               href="#" data-bs-toggle="pill" role="tab">LDAP</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a data-tab="google"
+                                            <a data-bs-tab="google"
                                                data-bind="click: onTabClick, class: 'nav-link' + (tab_active() == 'google' ? ' active' : '')"
-                                               href="#" data-toggle="pill" role="tab">Google
+                                               href="#" data-bs-toggle="pill" role="tab">Google
                                                 OAuth</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a data-tab="github"
+                                            <a data-bs-tab="github"
                                                data-bind="click: onTabClick, class: 'nav-link' + (tab_active() == 'github' ? ' active' : '')"
-                                               href="#" data-toggle="pill" role="tab">GitHub
+                                               href="#" data-bs-toggle="pill" role="tab">GitHub
                                                 OAuth</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a data-tab="azure"
+                                            <a data-bs-tab="azure"
                                                data-bind="click: onTabClick, class: 'nav-link' + (tab_active() == 'azure' ? ' active' : '')"
-                                               href="#" data-toggle="pill" role="tab">Azure
+                                               href="#" data-bs-toggle="pill" role="tab">Azure
                                                 OAuth</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a data-tab="oidc"
+                                            <a data-bs-tab="oidc"
                                                data-bind="click: onTabClick, class: 'nav-link' + (tab_active() == 'oidc' ? ' active' : '')"
-                                               href="#" data-toggle="pill" role="tab">OpenID
+                                               href="#" data-bs-toggle="pill" role="tab">OpenID
                                                 Connect OAuth</a>
                                         </li>
                                     </ul>
                                     <div class="tab-content">
 
-                                        <div data-tab="local"
+                                        <div data-bs-tab="local"
                                              data-bind="class: 'tab-pane' + (tab_active() == 'local' ? ' active' : '')">
                                             <div class="row">
                                                 <div class="col-12 col-sm-6 col-lg-4">
@@ -298,13 +298,13 @@
                                         </div>
                                         <!-- /.tab-pane -->
 
-                                        <div data-tab="ldap"
+                                        <div data-bs-tab="ldap"
                                              data-bind="class: 'tab-pane' + (tab_active() == 'ldap' ? ' active' : '')">
                                             <div class="row">
                                                 <div class="col-12 col-sm-6 col-lg-4">
                                                     {% if error %}
                                                         <div class="alert alert-danger alert-dismissible">
-                                                            <button type="button" class="close" data-dismiss="alert"
+                                                            <button type="button" class="close" data-bs-dismiss="alert"
                                                                     aria-hidden="true">&times;
                                                             </button>
                                                             <h4><i class="icon fa fa-ban"></i> Error!</h4>
@@ -763,7 +763,7 @@
                                         </div>
                                         <!-- /.tab-pane -->
 
-                                        <div data-tab="google"
+                                        <div data-bs-tab="google"
                                              data-bind="class: 'tab-pane' + (tab_active() == 'google' ? ' active' : '')">
                                             <div class="row">
                                                 <div class="col-12 col-sm-6 col-lg-4">
@@ -888,7 +888,7 @@
                                         </div>
                                         <!-- /.tab-pane -->
 
-                                        <div data-tab="github"
+                                        <div data-bs-tab="github"
                                              data-bind="class: 'tab-pane' + (tab_active() == 'github' ? ' active' : '')">
                                             <div class="row">
                                                 <div class="col-12 col-sm-6 col-lg-4">
@@ -1010,7 +1010,7 @@
                                         </div>
                                         <!-- /.tab-pane -->
 
-                                        <div data-tab="azure"
+                                        <div data-bs-tab="azure"
                                              data-bind="class: 'tab-pane' + (tab_active() == 'azure' ? ' active' : '')">
                                             <div class="row">
                                                 <div class="col-12 col-sm-6 col-lg-4">
@@ -1313,7 +1313,7 @@
                                         </div>
                                         <!-- /.tab-pane -->
 
-                                        <div data-tab="oidc"
+                                        <div data-bs-tab="oidc"
                                              data-bind="class: 'tab-pane' + (tab_active() == 'oidc' ? ' active' : '')">
                                             <div class="row">
                                                 <div class="col-12 col-sm-6 col-lg-4">
