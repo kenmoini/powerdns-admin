@@ -70,11 +70,14 @@ def run_migrations_online():
                                 poolclass=pool.NullPool)
 
     connection = engine.connect()
+    configure_args = current_app.extensions['migrate'].configure_args
+    if 'render_as_batch' not in configure_args:
+        configure_args['render_as_batch'] = config.get_main_option('sqlalchemy.url').startswith('sqlite:')
+
     context.configure(connection=connection,
                       target_metadata=target_metadata,
                       process_revision_directives=process_revision_directives,
-                      render_as_batch=config.get_main_option('sqlalchemy.url').startswith('sqlite:'),
-                      **current_app.extensions['migrate'].configure_args)
+                      **configure_args)
 
     try:
         with context.begin_transaction():
