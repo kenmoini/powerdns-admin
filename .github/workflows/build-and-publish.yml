@@ -6,7 +6,7 @@ env:
   CONTAINERFILE_PATH: docker/Dockerfile.fedora
   WORKFLOW_TRIGGER: 1
   REGISTRY: ghcr.io
-  IMAGE_NAME: powerdns-admin
+  IMAGE_NAME: kenmoini/powerdns-admin
 
 on:
   workflow_dispatch:
