@@ -71,7 +71,6 @@ FROM quay.io/fedora/fedora:43 AS runtime
 ENV FLASK_APP=/app/powerdnsadmin/__init__.py \
     USER=pda
 
-    # dnf install -y mariadb-connector-c-devel postgresql python3-gunicorn python3-ldap python3-flask python3-psycopg2 python3-xmlsec xmlsec1 tzdata && \
 RUN dnf update -y && \
     dnf install -y mariadb-connector-c-devel postgresql python3-gunicorn python3-ldap python3-flask python3-psycopg2 python3-xmlsec xmlsec1 tzdata && \
     groupadd --system ${USER} && \
@@ -82,7 +81,7 @@ RUN dnf update -y && \
     dnf clean all && \
     rm -rf /var/cache/dnf/*
 
-# COPY --from=builder /usr/bin/flask /usr/bin/
+COPY --from=builder /usr/local/bin/ /usr/local/bin/
 COPY --from=builder /usr/lib/python3.14/site-packages /usr/lib/python3.14/site-packages
 COPY --from=builder /usr/lib64/python3.14/site-packages /usr/lib64/python3.14/site-packages
 COPY --from=builder /usr/local/lib/python3.14/site-packages /usr/local/lib/python3.14/site-packages
@@ -92,13 +91,10 @@ COPY ./docker/entrypoint.sh /usr/bin/
 
 WORKDIR /app
 
-COPY ./requirements.txt /app/requirements.txt
-
-RUN python3 -m pip install -r requirements.txt && \
-    chown ${USER}:${USER} ./configs /app && \
+RUN chown ${USER}:${USER} ./configs /app && \
     cat ./powerdnsadmin/default_config.py ./configs/docker_config.py > ./powerdnsadmin/docker_config.py
 
-EXPOSE 80/tcp
+EXPOSE 8080/tcp
 USER ${USER}
 HEALTHCHECK --interval=5s --timeout=5s --start-period=20s --retries=5 CMD wget --output-document=- --quiet --tries=1 http://127.0.0.1${SCRIPT_NAME:-/}
 ENTRYPOINT ["entrypoint.sh"]
