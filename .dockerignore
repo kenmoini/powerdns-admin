@@ -95,6 +95,7 @@ npm-debug.log
 
 # Docker
 Dockerfile*
+docker/Dockerfile*
 docker-compose*
 .dockerignore
 

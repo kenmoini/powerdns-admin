@@ -46,7 +46,6 @@ index_bp = Blueprint('index',
                      url_prefix='/')
 
 
-@index_bp.before_app_first_request
 def register_modules():
     global google
     global github
@@ -58,6 +57,19 @@ def register_modules():
     azure = azure_oauth()
     oidc = oidc_oauth()
     saml = SAML()
+
+
+@index_bp.record_once
+def _register_modules_on_app(state):
+    app = state.app
+    _modules_registered = False
+
+    @app.before_request
+    def _ensure_modules_registered():
+        nonlocal _modules_registered
+        if not _modules_registered:
+            _modules_registered = True
+            register_modules()
 
 
 @index_bp.before_request

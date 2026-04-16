@@ -58,11 +58,18 @@ def create_app(config=None):
         from flask_sslify import SSLify
         _sslify = SSLify(app)  # lgtm [py/unused-local-variable]
 
+    # Initialize db before Flask-Session to prevent Flask-Session from
+    # creating its own SQLAlchemy instance (which conflicts with
+    # Flask-SQLAlchemy 3.x's single-instance-per-app requirement)
+    from .models.base import db
+    db.init_app(app)
+
     # Load Flask-Session
     app.config['SESSION_TYPE'] = app.config.get('SESSION_TYPE')
     if 'SESSION_TYPE' in os.environ:
         app.config['SESSION_TYPE'] = os.environ.get('SESSION_TYPE')
 
+    app.config['SESSION_SQLALCHEMY'] = db
     sess = Session(app)
 
     # create sessions table if using sqlalchemy backend

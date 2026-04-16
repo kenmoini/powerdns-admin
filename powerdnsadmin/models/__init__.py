@@ -20,5 +20,5 @@ from .record_entry import RecordEntry
 
 
 def init_app(app):
-    db.init_app(app)
+    # db.init_app(app) is called in create_app() before Flask-Session
     _migrate = Migrate(app, db)  # lgtm [py/unused-local-variable]
