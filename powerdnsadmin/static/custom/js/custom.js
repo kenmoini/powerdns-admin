@@ -293,11 +293,11 @@ function copy_otp_secret_to_clipboard() {
 /** add active class and stay opened when selected */
 
 // for sidebar menu entirely but not cover treeview
-$('ul.nav-sidebar a').filter(function() {
+$('ul.sidebar-menu a').filter(function() {
     return this.href == window.location.href.split('?')[0];
 }).addClass('active');
 
 // for treeview
 $('ul.nav-treeview a').filter(function() {
     return this.href == window.location.href.split('?')[0];
-}).parentsUntil(".nav-sidebar > .nav-treeview").addClass('menu-open').prev('a').addClass('active');
+}).parentsUntil(".sidebar-menu > .nav-treeview").addClass('menu-open').prev('a').addClass('active');

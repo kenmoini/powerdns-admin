@@ -46,10 +46,10 @@ table td {
     width: 100%;
 }
 
-.sidebar .image { padding-top: 0.7em; }
-.sidebar .info { color: #fff; }
-.sidebar .info p { margin: 0; }
-.sidebar .info a { font-size: 0.8em; }
+.sidebar-wrapper .image { padding-top: 0.7em; }
+.sidebar-wrapper .info { color: #fff; }
+.sidebar-wrapper .info p { margin: 0; }
+.sidebar-wrapper .info a { font-size: 0.8em; }
 
 /* Global Styles */
 table.records thead th, table.records tbody td { text-align: center; vertical-align: middle; }
