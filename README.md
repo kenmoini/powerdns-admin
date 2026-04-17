@@ -46,7 +46,7 @@ To run the application using the latest stable release on Docker Hub, run the fo
 $ docker run -d \
     -e SECRET_KEY='a-very-secret-key' \
     -v pda-data:/data \
-    -p 9191:80 \
+    -p 8080:80 \
     powerdnsadmin/pda-legacy:latest
 ```
 
@@ -68,7 +68,7 @@ This creates a volume named `pda-data` to persist the default SQLite database wi
    $ docker-compose up
    ```
 
-You can then access PowerDNS-Admin by pointing your browser to http://localhost:9191.
+You can then access PowerDNS-Admin by pointing your browser to http://localhost:8080.
 
 ## Screenshots
 

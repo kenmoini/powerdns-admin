@@ -13,4 +13,4 @@ For Postgres:
 SQLALCHEMY_DATABASE_URI = 'postgresql://powerdnsadmin:powerdnsadmin@127.0.0.1/powerdnsadmindb'
 ```
 
-Open your web browser and go to `http://localhost:9191` to visit PowerDNS-Admin web interface. Register a user. The first user will be in the Administrator role.
+Open your web browser and go to `http://localhost:8080` to visit PowerDNS-Admin web interface. Register a user. The first user will be in the Administrator role.

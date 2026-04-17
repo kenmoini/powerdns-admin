@@ -76,7 +76,7 @@ flask assets build
 ./run.py
 ```
 
-Open your web browser and access to `http://localhost:9191` to visit PowerDNS-Admin web interface. Register an user. The first user will be in Administrator role.
+Open your web browser and access to `http://localhost:8080` to visit PowerDNS-Admin web interface. Register an user. The first user will be in Administrator role.
 
 At the first time you login into the PDA UI, you will be redirected to setting page to configure the PDNS API information.
 

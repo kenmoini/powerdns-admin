@@ -70,10 +70,10 @@ TODO: Setup a local Docker postgres database ready to go (should probably move t
 ```
 docker run --name pdnsadmin-test -e BIND_ADDRESS=0.0.0.0 
 -e SECRET_KEY='a-very-secret-key' 
--e PORT='9191' 
+-e PORT='8080' 
 -e SQLA_DB_USER='powerdns_admin_user' 
 -e SQLA_DB_PASSWORD='exceptionallysecure' 
 -e SQLA_DB_HOST='192.168.0.100' 
 -e SQLA_DB_NAME='powerdns_admin_test' 
--v /data/node_modules:/var/www/powerdns-admin/node_modules -d -p 9191:9191 ixpict/powerdns-admin-pgsql:latest
+-v /data/node_modules:/var/www/powerdns-admin/node_modules -d -p 8080:8080 ixpict/powerdns-admin-pgsql:latest
 ```

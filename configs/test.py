@@ -5,7 +5,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 SALT = '$2b$12$yLUMTIfl21FKJQpTkRQXCu'
 SECRET_KEY = 'e951e5a1f4b94151b360f47edf596dd2'
 BIND_ADDRESS = '0.0.0.0'
-PORT = 9191
+PORT = 8080
 HSTS_ENABLED = False
 
 ### DATABASE - SQLite

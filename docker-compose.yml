@@ -5,7 +5,7 @@ services:
     image: powerdnsadmin/pda-legacy:latest
     container_name: powerdns_admin
     ports:
-      - "9191:80"
+      - "8080:80"
     logging:
       driver: json-file
       options:

@@ -58,7 +58,7 @@ Edit the values below to something sensible
 SALT = '[something]'
 SECRET_KEY = '[something]'
 BIND_ADDRESS = '0.0.0.0'
-PORT = 9191
+PORT = 8080
 OFFLINE_MODE = False
 
 ### DATABASE CONFIG
@@ -93,7 +93,7 @@ Now you can run PowerDNS-Admin by command
 ./run.py
 ```
 
-Open your web browser and go to `http://localhost:9191` to visit PowerDNS-Admin web interface. Register a user. The first user will be in the Administrator role.
+Open your web browser and go to `http://localhost:8080` to visit PowerDNS-Admin web interface. Register a user. The first user will be in the Administrator role.
 
 ### Running at startup
 
