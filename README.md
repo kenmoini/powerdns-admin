@@ -4,7 +4,7 @@
 
 A PowerDNS web interface with advanced features.
 
-[![CodeQL](https://github.com/kenmoini/powerdns-admin/actions/workflows/codeql-analysis.yml/badge.svg?branch=master)](https://github.com/kenmoini/powerdns-admin/actions/workflows/codeql-analysis.yml)
+[![CodeQL](https://github.com/kenmoini/powerdns-admin/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/kenmoini/powerdns-admin/actions/workflows/github-code-scanning/codeql)
 [![Docker Image](https://github.com/kenmoini/powerdns-admin/actions/workflows/build-and-publish.yml/badge.svg?branch=master)](https://github.com/kenmoini/powerdns-admin/actions/workflows/build-and-publish.yml)
 
 #### Features:
