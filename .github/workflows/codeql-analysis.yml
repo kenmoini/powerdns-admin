@@ -80,13 +80,13 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       actions: read
-      contents: read
+      contents: write
       security-events: write
 
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'javascript', 'python', 'action' ]
+        language: [ 'javascript', 'python', 'actions' ]
         # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
         # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
 
