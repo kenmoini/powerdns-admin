@@ -231,9 +231,9 @@ class User(db.Model):
                         'User "{0}" input a wrong LDAP password. Authentication request from {1}'
                         .format(self.username, src_ip))
                     return False
-
+            safe_username = ldap.filter.escape_filter_chars(self.username)
             searchFilter = "(&({0}={1}){2})".format(LDAP_FILTER_USERNAME,
-                                                    self.username,
+                                                    safe_username,
                                                     LDAP_FILTER_BASIC)
             current_app.logger.debug('Ldap searchFilter {0}'.format(searchFilter))
 
