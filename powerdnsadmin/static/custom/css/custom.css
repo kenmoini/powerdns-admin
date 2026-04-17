@@ -46,7 +46,7 @@ table td {
     width: 100%;
 }
 
-.sidebar-wrapper .image { padding-top: 0.7em; }
+.sidebar-wrapper .image { padding-right: 0.7em; }
 .sidebar-wrapper .info { color: #fff; }
 .sidebar-wrapper .info p { margin: 0; }
 .sidebar-wrapper .info a { font-size: 0.8em; }
@@ -57,6 +57,8 @@ table.records thead th:last-of-type { width: 50px; }
 div.records > div.dataTables_wrapper > div.row:first-of-type { margin: 0 0.5em 0 0.5em; }
 div.records > div.dataTables_wrapper > div.row:last-of-type { margin: 0.4em 0.5em 0.4em 0.5em; }
 div.records > div.dataTables_wrapper table.dataTable { margin: 0 !important; }
+/* .dt-paging { margin-bottom: 0.5em !important; } */
+div.dt-container div.row:first-of-type { margin: 0.5rem 0 1rem 0 !important; }
 
 .diff {
     font-family: monospace;
