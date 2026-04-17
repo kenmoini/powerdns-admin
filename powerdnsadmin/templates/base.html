@@ -68,12 +68,12 @@
             {% if current_user.id is defined %}
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="{{ user_image_url }}" class="rounded-circle shadow" alt="User Image">
+                        <img src="{{ user_image_url }}" class="img-size-50 rounded-circle shadow" alt="User Image">
                     </div>
                     <div class="info">
                         <p>{{ current_user.firstname }} {{ current_user.lastname }}</p>
                         <span>
-                            <a href="{{ url_for('user.profile') }}"><i class="nav-icon fa-solid fa-user"></i> Edit Profile</a>
+                            <a href="{{ url_for('user.profile') }}"><i class="nav-icon fa-solid fa-pencil"></i> Edit Profile</a>
                             &nbsp;|&nbsp;
                             <a href="{{ url_for('index.logout') }}"><i class="nav-icon fa-solid fa-sign-out-alt"></i> Logout</a>
                         </span>
