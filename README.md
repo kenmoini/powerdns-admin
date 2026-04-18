@@ -5,7 +5,7 @@
 A PowerDNS web interface with advanced features.
 
 [![CodeQL](https://github.com/kenmoini/powerdns-admin/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/kenmoini/powerdns-admin/actions/workflows/github-code-scanning/codeql)
-[![Docker Image](https://github.com/kenmoini/powerdns-admin/actions/workflows/build-and-publish.yml/badge.svg?branch=master)](https://github.com/kenmoini/powerdns-admin/actions/workflows/build-and-publish.yml)
+[![Container Image](https://github.com/kenmoini/powerdns-admin/actions/workflows/build-and-publish.yml/badge.svg?branch=master)](https://github.com/kenmoini/powerdns-admin/actions/workflows/build-and-publish.yml)
 
 #### Features:
 
@@ -26,7 +26,9 @@ A PowerDNS web interface with advanced features.
 - Provides an API for zone and record management among other features
 - Provides full IDN/Punycode support
 
-## [Project Update - PLEASE READ!!!](https://github.com/kenmoini/powerdns-admin/discussions/1708)
+## [Upstream Project Update - PLEASE READ!!!](https://github.com/PowerDNS-Admin/powerdns-admin/discussions/1708)
+
+This fork of the stalled upstream project includes fixes for applicable CVEs, updates for AdminLTE 2 and Bootstrap 4 to AdminLTE 4 and Bootstrap 5, and some minor fixes.
 
 ## Running PowerDNS-Admin
 
