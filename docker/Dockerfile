@@ -1,5 +1,5 @@
 # Build image
-FROM quay.io/fedora/fedora:43 AS builder
+FROM quay.io/fedora/fedora:44 AS builder
 
 ARG BUILD_DEPENDENCIES="binutils glibc-common glibc-langpack-en file-devel file gcc g++ make patch glibc-devel \
     libffi-devel \
@@ -66,7 +66,7 @@ RUN mkdir -p /app && \
     cp -r /build/configs/docker_config.py /app/configs
 
 # Distribution Image
-FROM quay.io/fedora/fedora:43 AS runtime
+FROM quay.io/fedora/fedora:44 AS runtime
 
 ENV FLASK_APP=/app/powerdnsadmin/__init__.py \
     USER=pda
