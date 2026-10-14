@@ -39,7 +39,7 @@ pytimeparse==1.1.8
 pytz==2022.7.1
 qrcode==7.4.2
 requests==2.33.1
-rjsmin==1.2.5
+rjsmin==1.3.0
 webcolors==1.13
 werkzeug==3.1.8
 zipp==3.23.1
